@@ -1,0 +1,50 @@
+--Questions
+--Q1.
+SELECT actor_id, first_name, last_name FROM actor ;
+
+--Q2.
+SELECT actor_id, first_name, last_name FROM actor WHERE first_name='John';
+
+--Q3. 
+SELECT actor_id, first_name, last_name FROM actor WHERE last_name='Neeson';
+
+--Q4.
+SELECT actor_id, first_name, last_name FROM actor WHERE (actor_ID % 10)=0;
+
+--Q5.
+SELECT film_id, title, description  FROM film  WHERE film_id='100';
+
+--Q6.
+SELECT film_id, title, rating  FROM film  WHERE rating='R';
+
+--Q7.
+SELECT film_id, title, rating  FROM film  WHERE NOT rating='R';
+
+--Q8.
+SELECT film_id, length  FROM film ORDER BY length ASC  LIMIT 10;
+
+--Q9.
+SELECT title  FROM film ORDER BY length ASC  LIMIT 10;
+
+--Q10.
+SELECT title, special_features  FROM film WHERE special_features='Deleted Scenes';
+
+--Q11.
+SELECT DISTINCT last_name  FROM actor  ;
+
+--Q12.
+SELECT last_name, COUNT(*) a FROM actor GROUP BY last_name HAVING a > 1;
+
+--Q13.
+SELECT actor_id FROM film_actor GROUP BY actor_id ORDER BY COUNT(*) LIMIT 1;
+
+
+
+--Q15.
+SELECT film_id, title, release_year FROM film WHERE film_id='1';
+
+--Q16
+SELECT AVG(length) FROM film;
+
+
+
